@@ -1,12 +1,7 @@
 function refreshWeather(response){
-    let temperatureElement = document.querySelector("#temperature");
-    let temperature = response.data.temperature.current; 
-    let cityElement = document.querySelector("#city")
-   
-    cityElement.innerHTML = response.data.city;
-    temperatureElement.innerHTML = Math.round(temperature); 
-
+    let temperatureElement.inner
 }
+
 
 function searchCity(city) {
     let apiKey = "2bf02005obb4ft73c247eba0b4e8f73d";
@@ -14,15 +9,20 @@ function searchCity(city) {
     axios.get(apiUrl).then(refreshWeather);
 }
 
+
+
+
+
+
 function handleSearchSubmit(event) {
+
     event.preventDefault();
     let searchInput = document.querySelector("#search-form-input");
-    
+    let cityElement = document.querySelector("#city")
+    cityElement.innerHTML = searchInput.value; 
     searchCity(searchInput.value);
 
 }
 
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
-
-searchCity("Cape Town");
