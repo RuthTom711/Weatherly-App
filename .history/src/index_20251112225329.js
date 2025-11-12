@@ -8,7 +8,7 @@ function refreshWeather(response){
     let timeElement = document.querySelector("#time");
     let date = new Date(response.data.time * 1000);
 
-
+   console.log(response.data);
    
     cityElement.innerHTML = response.data.city;
 
@@ -37,7 +37,7 @@ function formatDate(date) {
     let day = days [date.getDay()];
 
     if (minutes < 10) {
-        minutes = `0${minutes}`;
+        minutes = 
     }
 
     return `${day} ${hours}: ${minutes}`;
