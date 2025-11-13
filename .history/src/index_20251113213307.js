@@ -64,7 +64,7 @@ let days = ["Tue","Wed","Thu","Fri","Sat"];
 let forecastHtml = "";
 
 days.forEach(function (day)  { 
-forecastHtml =  
+forecast =  
 forecastHtml +
  `
      <div class="weather-forecast-day">
